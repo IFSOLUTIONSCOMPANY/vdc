@@ -1,10 +1,11 @@
 import React from 'react'
 
 const About = () => {
+
     return (
         <>
             <section>
-                <div className="hero min-h-screen bg-[url('../public/image/charity_banner.jpg')]">
+                <div className="hero min-h-screen bg-[url('../image/charity_banner.jpg')]">
                     <div className="bg-opacity-60"></div>
                     <div className="hero-content">
                         <div className="text-center  text-white">
