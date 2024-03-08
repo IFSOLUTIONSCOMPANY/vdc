@@ -3,6 +3,8 @@ import React, { useEffect } from 'react';
 import './App.css'
 import Navbar from './components/Nav/Navbar'
 import About from './components/About/About'
+import Events from './components/Events/Events'
+import Footer from './components/Footer/Footer'
 import AOS from 'aos'
 
 function App() {
@@ -15,6 +17,8 @@ function App() {
     <>
       <Navbar />
       <About />
+      <Events />
+      <Footer />
     </>
   )
 }

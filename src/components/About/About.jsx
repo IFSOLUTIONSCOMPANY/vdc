@@ -10,7 +10,12 @@ const About = () => {
                     <div className="hero-content">
                         <div className="text-center  text-white">
                             <h1 className="text-5xl font-bold">Notre Histoire</h1>
-                            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.</p>
+                            <p className="py-6">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
+                                exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi.
+                            </p>
+                            <p className='py-6'>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatibus fuga doloremque, ut mollitia quos quae laudantium quisquam nemo,
+                                assumenda beatae corporis, voluptatem delectus commodi quibusdam dolores. Laudantium, delectus quia!
+                            </p>
                         </div>
                     </div>
                 </div>
