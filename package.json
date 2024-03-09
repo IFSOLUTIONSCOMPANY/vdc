@@ -21,11 +21,16 @@
     "@mui/icons-material": "^5.15.12",
     "@mui/material": "^5.15.12",
     "@nextui-org/react": "^2.2.10",
+    "@waaark/luge": "0.6.18-beta.2",
     "aos": "^2.3.4",
+    "bootstrap": "^5.3.3",
+    "flowbite-react": "^0.7.2",
     "framer-motion": "^11.0.8",
     "headlessui": "^0.0.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-bootstrap": "^2.10.1",
+    "react-dom": "^18.2.0",
+    "react-router-hash-link": "^2.4.3"
   },
   "devDependencies": {
     "@types/react": "^18.2.56",
@@ -38,6 +43,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
     "postcss": "^8.4.35",
+    "react-router-dom": "^6.22.3",
     "tailwindcss": "^3.4.1",
     "vite": "^5.1.4"
   }
