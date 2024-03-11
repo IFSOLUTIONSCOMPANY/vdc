@@ -26,7 +26,7 @@ const Navbar = () => {
             </div>
             <img src="../../../logo/vdc.png" width="80px" className='flex place-self-auto w-24 md:hidden place-content-center' />
             <div className="navbar-center hidden md:flex">
-                <ul className="menu menu-horizontal text-lg px-1 text-white">
+                <ul className="menu menu-horizontal text-lg px-1 text-white bg-white/10 rounded-3xl">
                     <li className='mx-8'><Link to="#about">À propos</Link></li>
                     <li className='mx-8'><Link to="#events">Évènements</Link></li>
                     <li className='mx-8'><Link to="#journey">Voyage</Link></li>
