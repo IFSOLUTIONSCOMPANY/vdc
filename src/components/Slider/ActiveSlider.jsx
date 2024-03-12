@@ -1,26 +1,32 @@
 import { Swiper, SwiperSlide } from "swiper/react";
+import { FreeMode, Pagination } from "swiper/modules";
+import { RxArrowBottomLeft } from "react-icons/rx";
+import { ModalData, ServiceData } from "../../constant/index";
 
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/free-mode";
 
-import { FreeMode, Pagination } from "swiper/modules";
-
-import { ServiceData } from "../../constant/index";
-import { RxArrowTopRight } from "react-icons/rx"
-
 const ActiveSlider = () => {
     return (
-        <div className="flex items-center justify-center flex-col h-[900px] bg-[#6c34af]">
+        <div className="flex items-center justify-center flex-col h-screen bg-white">
+            <h1 className="text-2xl text-black font-semibold my-8">Nos Évènements</h1>
             <Swiper
                 breakpoints={{
-                    340: {
-                        slidesPerView: 2,
-                        spaceBetween: 10,
+                    320: {
+                        slidesPerView: 1,
                     },
-                    700: {
+                    640: {
+                        slidesPerView: 2,
+                    },
+                    768: {
+                        slidesPerView: 2,
+                    },
+                    1024: {
                         slidesPerView: 3,
-                        spaceBetween: 10,
+                    },
+                    1280: {
+                        slidesPerView: 4,
                     },
                 }}
                 freeMode={true}
@@ -28,27 +34,34 @@ const ActiveSlider = () => {
                     clickable: true,
                 }}
                 modules={[FreeMode, Pagination]}
-                className="max-w-[90%] lg:max-w-[80%]"
+                className="w-full px-10"
             >
-                {ServiceData.map((item) => (
-                    <SwiperSlide key={item.title}>
-                        <div className="flex flex-col gap-6 mb-20 group relative shadow-lg text-white rounded-xl px-6 py-8 h-[250px] w-[215px] lg:h-[400px] lg:w-[350px] overflow-hidden cursor-pointer">
-                            <div
-                                className="absolute inset-0 bg-cover bg-center"
-                                style={{ backgroundImage: `url(${item.backgroundImage})` }}
-                            />
-                            <div className="absolute inset-0 bg-black opacity-10 group-hover:opacity-50" />
-                            <div className="relative flex flex-col gap-3">
-                                <item.icon className="text-gray-500 group-hover:text-gray-50 w-[32px] h-[32px]" />
-                                <h1 className="text-xl lg:text-2xl">{item.title} </h1>
-                                <p className="lg:text-[18px]">{item.content} </p>
+                {ServiceData.map((item, index) => (
+                    <SwiperSlide key={item.title} >
+                        <div className="flex flex-col hover:shadow-gray-900 shadow-lg text-white rounded-2xl overflow-hidden cursor-grab active:cursor-grabbing mx-10 mt-10 mb-14">
+                            <img src={item.backgroundImage} alt="event background" className="w-full" />
+                            <div className="bg-blue-950 space-y-3 pt-2">
+                                <h1 className="text-center md:text-lg font-sans">{item.title}</h1>
+                                <div onClick={() => document.getElementById(`my_modal_${index}`).showModal()} className="text-center">
+                                    <button className="btn btn-neutral text-white btn-sm mb-5 btn-outline">+ d'infos</button>
+                                </div>
                             </div>
-                            <RxArrowTopRight className="absolute bottom-5 left-5 w-[35px] h-[35px] text-white group-hover:text-blue-500 group-hover:rotate-45 duration-100" />
                         </div>
+                        <dialog id={`my_modal_${index}`} className="modal" key={item.title}>
+                            <div className="modal-box">
+                                <h3 className="font-bold text-lg">{ModalData[index].place}</h3>
+                                <p className="py-4">Press ESC key or click outside to close</p>
+                            </div>
+                            <form method="dialog" className="modal-backdrop">
+                                <button>close</button>
+                            </form>
+                        </dialog>
+
+
                     </SwiperSlide>
                 ))}
             </Swiper>
-        </div>
+        </div >
     );
 };
 
