@@ -9,8 +9,8 @@ import "swiper/css/free-mode";
 
 const ActiveSlider = () => {
     return (
-        <div className="flex items-center justify-center flex-col h-screen bg-white">
-            <h1 className="text-2xl text-black font-semibold my-8">Nos Évènements</h1>
+        <div className="flex items-center justify-center flex-col h-screen bg-gradient-to-br from-blue-900 to-indigo-400">
+            <h1 className="text-2xl text-white font-semibold my-8">Nos Évènements</h1>
             <Swiper
                 breakpoints={{
                     320: {
@@ -42,15 +42,16 @@ const ActiveSlider = () => {
                             <img src={item.backgroundImage} alt="event background" className="w-full" />
                             <div className="bg-blue-950 space-y-3 pt-2">
                                 <h1 className="text-center md:text-lg font-sans">{item.title}</h1>
+                                <p className="text-center">{item.content}</p>
                                 <div onClick={() => document.getElementById(`my_modal_${index}`).showModal()} className="text-center">
                                     <button className="btn btn-neutral text-white btn-sm mb-5 btn-outline">+ d'infos</button>
                                 </div>
                             </div>
                         </div>
                         <dialog id={`my_modal_${index}`} className="modal" key={item.title}>
-                            <div className="modal-box">
+                            <div className="modal-box bg-blue-950">
                                 <h3 className="font-bold text-lg">{ModalData[index].place}</h3>
-                                <p className="py-4">Press ESC key or click outside to close</p>
+                                <p className="py-4">{ModalData[index].content}</p>
                             </div>
                             <form method="dialog" className="modal-backdrop">
                                 <button>close</button>
