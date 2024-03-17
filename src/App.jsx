@@ -6,14 +6,17 @@ import About from './components/About/About'
 import Events from './components/Events/Events'
 import Journey from './components/Journey/Journey'
 import Footer from './components/Footer/Footer'
+import 'aos/dist/aos.css'
 import AOS from 'aos'
 
 function App() {
   useEffect(() => {
-    AOS.init({
-      duration: 2000
-    })
-  })
+    AOS.init(
+      {
+        duration: 2000
+      }
+    );
+  }, [])
   return (
     <BrowserRouter>
       <Navbar />

@@ -1,6 +1,6 @@
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Pagination } from "swiper/modules";
-import { RxArrowBottomLeft } from "react-icons/rx";
+import { IoMdTime } from "react-icons/io";
 import { ModalData, ServiceData } from "../../constant/index";
 
 import "swiper/css";
@@ -9,8 +9,8 @@ import "swiper/css/free-mode";
 
 const ActiveSlider = () => {
     return (
-        <div className="flex items-center justify-center flex-col h-screen bg-gradient-to-br from-blue-900 to-indigo-400">
-            <h1 className="text-2xl text-white font-semibold my-8">Nos Évènements</h1>
+        <div className="flex items-center justify-center flex-col lg:px-24 py-64 bg-gradient-to-br from-blue-900 to-indigo-400">
+            <h1 className="text-xl md:text-3xl lg:text-4xl text-white font-semibold my-8">Nos Évènements</h1>
             <Swiper
                 breakpoints={{
                     320: {
@@ -37,28 +37,26 @@ const ActiveSlider = () => {
                 className="w-full px-10"
             >
                 {ServiceData.map((item, index) => (
-                    <SwiperSlide key={item.title} >
-                        <div className="flex flex-col hover:shadow-gray-900 shadow-lg text-white rounded-2xl overflow-hidden cursor-grab active:cursor-grabbing mx-10 mt-10 mb-14">
+                    <SwiperSlide key={item.title}>
+                        <div className="flex flex-col hover:shadow-gray-900 shadow-lg text-white rounded-2xl overflow-hidden cursor-grab active:cursor-grabbing mx-10 mt-10 mb-14" data-aos="zoom-in" data-aos-duration="3000">
                             <img src={item.backgroundImage} alt="event background" className="w-full" />
                             <div className="bg-blue-950 space-y-3 pt-2">
-                                <h1 className="text-center md:text-lg font-sans">{item.title}</h1>
-                                <p className="text-center">{item.content}</p>
+                                <h1 className="text-center md:text-md max-lg:text-xl font-sans">{item.title}</h1>
+                                <p className="text-center text-sm">{item.content}</p>
                                 <div onClick={() => document.getElementById(`my_modal_${index}`).showModal()} className="text-center">
                                     <button className="btn btn-neutral text-white btn-sm mb-5 btn-outline">+ d'infos</button>
                                 </div>
                             </div>
                         </div>
                         <dialog id={`my_modal_${index}`} className="modal" key={item.title}>
-                            <div className="modal-box bg-blue-950">
-                                <h3 className="font-bold text-lg">{ModalData[index].place}</h3>
-                                <p className="py-4">{ModalData[index].content}</p>
+                            <div className="modal-box bg-blue-950 text-white">
+                                <h3 className="font-bold text-md md:text-lg text-left">{ModalData[index].place}</h3>
+                                <p className="py-4 md:text-lg text-center">{ModalData[index].content}</p>
                             </div>
                             <form method="dialog" className="modal-backdrop">
                                 <button>close</button>
                             </form>
                         </dialog>
-
-
                     </SwiperSlide>
                 ))}
             </Swiper>
