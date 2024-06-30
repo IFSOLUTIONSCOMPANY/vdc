@@ -9,14 +9,14 @@ const About = () => {
                     <div className="pt-24 px-12 lg:px-24 flex flex-row">
                         <div className='text-center md:text-left text-white'>
                             <div className="flex flex-col">
+
                                 <h1 className="text-xl md:text-3xl lg:text-4xl font-bold pb-4 pl-4" data-aos="fade-right">Les Voyageurs du Coeur</h1>
+
                                 <div className='bg-slate-900 bg-opacity-30 rounded-3xl px-4' data-aos="fade-down-right">
-                                    <p className="py-6 md:text-xl" data-aos="fade-up">Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda excepturi
-                                        exercitationem quasi. In deleniti eaque aut repudiandae et a id nisi. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem atque modi dolorum vero labore similique
-                                        sit. Odio quod, beatae impedit ab quisquam nulla sapiente itaque numquam, assumenda ullam non eius!
-                                        <br />
-                                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repellendus voluptatibus fuga doloremque, ut mollitia quos quae laudantium quisquam nemo,
-                                        assumenda beatae corporis, voluptatem delectus commodi quibusdam dolores. Laudantium, delectus quia!
+                                    <p className="py-6 md:text-xl text-wrap" data-aos="fade-up">L'association "Les Voyageurs du Cœur" a été créé en Février 2024 par des Théobaldiens âgés entre 18 et 20 ans.
+                                        Dans le contexte d'une société individualiste, les jeunes ont choisi de s'engager pour développer des actions de solidarité en faveur des personnes dans le besoin.
+                                        Un groupe formé d'environ 15 jeunes, met en place divers événements pour financer les actions prévues à cet effet. Au cours de ces événements, leur objectif est aussi de
+                                        sensibiliser le public sur l'importance de la solidarité dans la vie. Si vous souhaitez les rejoindre pour participer à leurs actions, vous êtes les bienvenus et ils vous accueillent avec joie.
                                     </p>
                                 </div>
 

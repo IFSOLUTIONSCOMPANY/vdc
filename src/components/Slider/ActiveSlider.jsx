@@ -50,8 +50,13 @@ const ActiveSlider = () => {
                         </div>
                         <dialog id={`my_modal_${index}`} className="modal" key={item.title}>
                             <div className="modal-box bg-blue-950 text-white">
-                                <h3 className="font-bold text-md md:text-lg text-left">{ModalData[index].place}</h3>
+                                <h3 className="font-bold text-md md:text-lg text-center">{ModalData[index].place}</h3>
+                                <p className="py-4 md:text-lg text-center">{ModalData[index].time}</p>
                                 <p className="py-4 md:text-lg text-center">{ModalData[index].content}</p>
+                                <p className="py-4 md:text-lg text-center">{ModalData[index].content_bis}</p>
+                                <p className="py-4 md:text-lg text-center">{ModalData[index].content_ter}</p>
+                                <p className="py-4 md:text-lg text-center">{ModalData[index].content_quarter}</p>
+                                <p className="py-4 md:text-lg text-center">{ModalData[index].question}</p>
                             </div>
                             <form method="dialog" className="modal-backdrop">
                                 <button>close</button>
