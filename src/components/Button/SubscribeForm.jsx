@@ -1,7 +1,7 @@
 import React from 'react'
 import { Icon } from '@iconify/react';
 
-const PDF_FILE_URL = 'http://localhost:5173/assets/event/fiche_dadhesion_association_vdc.docx'
+const PDF_FILE_URL = 'http://localhost:5173/assets/adhesion_form.docx'
 function SubscribeForm() {
     const downloadFileAtURL = (url) => {
         const fileName = url.split('/').pop()
