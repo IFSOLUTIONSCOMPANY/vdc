@@ -8,8 +8,8 @@ import {
 } from "react-icons/rx";
 import { IoMdFootball, IoMdTime } from "react-icons/io";
 
-import Event from "../../public/assets/event/event_bg.jpg";
-import dance from "../../public/assets/event/dance.jpg";
+import Event from "../../src/assets/event/event_bg.jpg";
+import dance from "../../src/assets/event/dance.jpg";
 import foot from "../../public/assets/event/foot.jpg";
 import petanque from "../../public/assets/event/petanque.jpg";
 import loto from "../../public/assets/event/loto.jpg";
@@ -91,7 +91,7 @@ export const ModalData = [
     title: "Soirée dansante senior",
     description: "Une soirée dansante pour les seniors a été organisée par l'association \"Les Voyageurs du Coeur\" le vendredi 14 juin au Centre Culturel Marc Brinon (1 rue des Vergers).",
     place: "Centre Culturel Marc Brinon - 1 Rue des Vergers",
-    content: "Horaires: 19H00 - 02H30",
+    time: "Horaires: 19H00 - 02H30",
     backgroundImage: dance,
   },
   {
@@ -107,7 +107,7 @@ export const ModalData = [
     title: "Loto",
     description: "Un loto a été organisé par l'association \"Les Voyageurs du Coeur\" le samedi 26 octobre au gymnase municipal (44 rue des Sablons).",
     place: "Gymnase Municipal - 44 Rue des Sablons",
-    content: "Horaires: 18H30 - 01H00",
+    time: "Horaires: 18H30 - 01H00",
     backgroundImage: Event,
   },
   {
@@ -115,7 +115,7 @@ export const ModalData = [
     title: "Cuisine du Monde",
     description: "Une soirée \"Cuisine du Monde\" a été organisée par l'association \"Les Voyageurs du Coeur\" le samedi 9 novembre au Centre Culturel Marc Brinon (1 rue des Vergers).",
     place: "Centre Culturel Marc Brinon - 1 Rue des Vergers",
-    content: "Horaires: 18H30 - 00H00",
+    time: "Horaires: 18H30 - 00H00",
     backgroundImage: Event,
   },
   {
@@ -123,7 +123,7 @@ export const ModalData = [
     title: "Tournoi de Belote",
     description: "Un tournoi de belote a été organisé par l'association \"Les Voyageurs du Coeur\" le samedi 30 novembre au Centre Culturel Marc Brinon (1 rue des Vergers).",
     place: "Centre Culturel Marc Brinon - 1 Rue des Vergers",
-    content: "Horaires: 19H00 - 01H00",
+    time: "Horaires: 19H00 - 01H00",
     backgroundImage: Event,
   },
 ];
